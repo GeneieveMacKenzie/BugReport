@@ -1,3 +1,8 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using BugReport.Services;
+using BugReport.Models;
+
 namespace BugReport.Controllers
 {
     [Route("api/[controller]")]
@@ -9,11 +14,14 @@ namespace BugReport.Controllers
         {
             _bs = bs
         }
+
         [HttpGet]
         public ActionResult<IEnumerable<Bug>> Get()
         {
-            tr
+            
         }
 
     }
 }
+
+
