@@ -1,4 +1,4 @@
-namespace BugReport.Interfaces;
+namespace BugReport.Interfaces
 {
     public interface IBug
     {
