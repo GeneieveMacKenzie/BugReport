@@ -16,5 +16,12 @@ namespace BugReport.Services
         {
             return _repo.Get();
         }
+
+        public Bug Create(Bug newBug)
+        {
+            int id = _repo.Create(newBug);
+            newBug.Id = id;
+            return newBug;
+        }
     }
 }

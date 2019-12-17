@@ -13,7 +13,7 @@ namespace BugReport.Controllers
         private readonly BugsService _bs;
         public BugsController(BugsService bs)
         {
-            _bs = bs
+            _bs = bs;
         }
 
         [HttpGet]
@@ -22,6 +22,18 @@ namespace BugReport.Controllers
             try
             {
                 return Ok(_bs.Get());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpPost]
+        public ActionResult<Bug> Create([FromBody] Bug newBug)
+        {
+            try
+            {
+                return Ok(_bs.Create(newBug));
             }
             catch (Exception e)
             {

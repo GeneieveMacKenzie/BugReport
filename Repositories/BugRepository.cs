@@ -19,6 +19,18 @@ namespace BugReport.Repositories
             string sql = "SELECT * FROM bugs";
             return _db.Query<Bug>(sql);
         }
+
+        public int Create(Bug newBug)
+        {
+            string sql = @"
+            INSERT INTO bugs
+            (creator, description, title)
+            VALUES
+            (@Creator, @Description, @Title)
+            SELECT LAST_INSERT_ID();
+            ";
+            return _db.ExecuteScalar<int>(sql, newBug);
+        }
     }
 
 }
