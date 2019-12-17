@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using BugReport.Services;
 using BugReport.Models;
+using System;
 
 namespace BugReport.Controllers
 {
@@ -18,7 +19,14 @@ namespace BugReport.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Bug>> Get()
         {
-            
+            try
+            {
+                return Ok(_bs.Get());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
     }
