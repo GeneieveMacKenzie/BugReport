@@ -1,8 +1,8 @@
 using System;
-using Keepr.Repositories;
-using Keepr.Models;
+using BugReport.Repositories;
+using BugReport.Models;
 
-namespace Keepr.Services
+namespace BugReport.Services
 {
     public class AccountService
     {

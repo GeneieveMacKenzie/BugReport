@@ -1,3 +1,5 @@
+using BugReport.Interfaces;
+
 namespace BugReport.Models
 {
     public class Bug : IBug

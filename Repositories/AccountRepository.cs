@@ -1,8 +1,8 @@
 using System.Data;
 using Dapper;
-using Keepr.Models;
+using BugReport.Models;
 
-namespace Keepr.Repositories
+namespace BugReport.Repositories
 {
     public class AccountRepository
     {

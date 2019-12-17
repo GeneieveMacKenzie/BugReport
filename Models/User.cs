@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
-namespace Keepr.Models
+namespace BugReport.Models
 {
 
     public class UserSignIn // HELPER MODEL

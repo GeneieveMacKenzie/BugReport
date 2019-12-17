@@ -7,7 +7,7 @@
 --     UNIQUE KEY email (email)
 -- );
 
--- CREATE TABLE vaults (
+-- CREATE TABLE bugs (
 --     id int NOT NULL AUTO_INCREMENT,
 --     name VARCHAR(255) NOT NULL,
 --     description VARCHAR(255) NOT NULL,
@@ -19,16 +19,12 @@
 --     PRIMARY KEY (id)
 -- );
 
--- CREATE TABLE keeps (
+-- CREATE TABLE bugs (
 --     id int NOT NULL AUTO_INCREMENT,
---     name VARCHAR(255) NOT NULL,
+--     creator VARCHAR(255) NOT NULL,
 --     description VARCHAR(255) NOT NULL,
+--     title VARCHAR(255),
 --     userId VARCHAR(255),
---     img VARCHAR(255),
---     isPrivate TINYINT,
---     views INT DEFAULT 0,
---     shares INT DEFAULT 0,
---     keeps INT DEFAULT 0,
 --     INDEX userId (userId),
 --     FOREIGN KEY (userId)
 --         REFERENCES users(id)
