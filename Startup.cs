@@ -63,6 +63,8 @@ namespace BugReport
             //NOTE REGISTER SERVICES
             services.AddTransient<AccountService>();
             services.AddTransient<AccountRepository>();
+            services.AddTransient<BugsService>();
+            services.AddTransient<BugRepository>();
         }
 
         private IDbConnection CreateDbConnection()
