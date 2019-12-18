@@ -3,12 +3,14 @@
     <h1>Welcome Home {{user.username}}</h1>
     <button v-if="user.id" @click="logout">logout</button>
     <router-link v-else :to="{name: 'login'}">Login</router-link>
-    </Bug>
+    <Bug/>
+    <NewBugModal/>
   </div>
 </template>
 
 <script>
 import Bug from "../Components/Bug"
+import NewBugModal from "../Components/NewBugModal"
 export default {
   name: "home",
   computed: {
@@ -21,6 +23,6 @@ export default {
       this.$store.dispatch("logout");
     }
   },
-  components:{Bug}
+  components:{Bug, NewBugModal}
 };
 </script>
